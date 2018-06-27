@@ -1,0 +1,42 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Simple API",
+        "description": "A simple API to learn how to write OpenAPI Specification"
+    },
+    "schemes": [
+        "http"
+    ],
+    "host": "localhost:9000",
+    "basePath": "/",
+    "paths": {
+        "/user": {
+            "get": {
+                "summary": "Gets all users",
+                "description": "Returns a list of users",
+                "responses": {
+                    "200": {
+                        "description": "A list of users",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "age": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
